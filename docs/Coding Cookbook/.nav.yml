@@ -1,0 +1,6 @@
+nav :
+  - index.md
+  - Git
+  - Python
+  - R
+  - SQL
