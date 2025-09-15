@@ -4,8 +4,6 @@ title : JLLR
 
 # Japanese Language Learning Resources
 
-
-
 ## Grammar
 
 /// html | div[style='float: left; width: 50%;']
@@ -38,9 +36,7 @@ title : JLLR
 /// html | div[style='clear: both;']
 ///
 
-## Immersion
-
-Guide/Setup for [mining](https://donkuri.github.io/learn-japanese/mining/) : 
+## Sentence Mining
 
 - [TheMoeWay](https://learnjapanese.moe)
 - [Immersion-Based Japanese Learning](https://donkuri.github.io/learn-japanese/)
@@ -139,9 +135,7 @@ In google, twitter, etc.. Use quotation marks to surround a word/phrase to find 
 
 ## YT Channels
 
-<h4> Immersion </h4>
-
-There are way too many, so I decided to put them on a [separate page](Immersion.md).
+/// html | div[style='float: left; width: 50%;']
 
 <h4> Education </h4>
 
@@ -152,6 +146,19 @@ There are way too many, so I decided to put them on a [separate page](Immersion.
 - [Cure Dolly](https://www.youtube.com/@organicjapanesewithcuredol49)
 - [Maruhi Academy](https://www.youtube.com/@maruhigakuen)
 - [Scripting Japan](https://www.youtube.com/@scriptingjapan)
+
+///
+
+/// html | div[style='float: right; width: 50%;']
+
+<h4> Immersion </h4>
+
+There are way too many, so I decided to put them on a [separate page](Immersion.md).
+
+///
+
+/// html | div[style='clear: both;']
+///
 
 
 
