@@ -1,0 +1,58 @@
+site_name: AWelson's Blog
+theme:
+    name: 'material'
+    features:
+      - navigation.tabs
+      - navigation.tabs.sticky
+      - navigation.indexes
+      - navigation.prune
+      - toc.follow
+    palette:
+
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: pink
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: pink
+      accent: blue
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+
+markdown_extensions:
+  - footnotes
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
+  - md_in_html
+  - pymdownx.blocks.html
+
+plugins:
+  - search
+  - blog:
+      blog_dir: blog
+  - git-revision-date-localized:
+      fallback_to_build_date: true
+  - awesome-nav
+
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js  
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js
+  - https://unpkg.com/mermaid/dist/mermaid.min.js
+  - javascripts/katex.js 
+  - https://www.youtube.com/iframe_api
+
+extra_css:
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css
+  - stylesheets/stylesheet.css
