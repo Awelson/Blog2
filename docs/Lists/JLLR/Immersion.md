@@ -20,6 +20,8 @@ WHY ARE THERE SO MANY!! GAHH!
 - [KYOMUO](https://www.youtube.com/@kyomuo)
 - [Blooming magic](https://www.youtube.com/@BloomingMagic_jp)
 - [BL diary](https://www.youtube.com/@BLdiaryJP)
+- [bloomelow](https://www.youtube.com/@bloomellow)
+- [BoysASMR](https://www.youtube.com/@Boys_ASMR)
 
 ///
 
@@ -36,6 +38,8 @@ WHY ARE THERE SO MANY!! GAHH!
 - [Sankosha](https://www.youtube.com/@sankosha_BL)
 - [Cue Egg Label & Melty Drop](https://www.youtube.com/@LibrePublishing)
 - [Nabarashoko](https://www.youtube.com/@nabarashoko)
+- [BLove-ch](https://www.youtube.com/@BLove-ch)
+- [Minakei](https://www.youtube.com/@minakeichannel)
 
 ///
 
