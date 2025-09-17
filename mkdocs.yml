@@ -53,8 +53,10 @@ extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js
   - https://unpkg.com/mermaid/dist/mermaid.min.js
   - javascripts/katex.js 
-  - https://www.youtube.com/iframe_api
+  - javascripts/YTclips.js
+  # - https://www.youtube.com/iframe_api
 
 extra_css:
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css
   - stylesheets/stylesheet.css
+  - stylesheets/YTclips.css
