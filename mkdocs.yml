@@ -28,6 +28,7 @@ theme:
         name: Switch to light mode
 
 markdown_extensions:
+  - tables
   - footnotes
   - admonition
   - pymdownx.details
