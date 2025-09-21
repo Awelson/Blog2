@@ -7,6 +7,10 @@ title : DSSR
 ### Online Textbooks
 
 - [R for Data Science](https://r4ds.hadley.nz/)
+- [Advanced R](https://adv-r.hadley.nz/index.html)
+- [Modern R with tidyverse](https://modern-rstats.eu/)
+- [Modern Statistics with R](https://www.modernstatisticswithr.com/)
+- [Modern Dive](https://moderndive.com/v2/index.html)
 - [Modern Data Visualization with R](https://rkabacoff.github.io/datavis/)
 - [Bayes Rules!](https://www.bayesrulesbook.com/)
 - [An Introduction to Bayesian Thinking](https://statswithr.github.io/book/)
