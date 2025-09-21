@@ -4,7 +4,7 @@ title: About
 
 # Categories
 
-## Maths
+## [Maths](../category/Maths)
 
 Exactly what it says. Mostly, this will be a place where I can document and keep track of some ideas/concepts.
 
@@ -16,7 +16,7 @@ Exactly what it says. Mostly, this will be a place where I can document and keep
 
 A place where I'll document some projects (mostly coding) that I have been working on.
 
-## [Japanese](../category/japanese)
+## [Japanese](../category/Japanese)
 
 Mostly stuff about the language since I am learning it at the moment, but can be about some bits of culture/history that I find cool too.
 
