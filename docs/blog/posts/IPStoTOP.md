@@ -12,7 +12,7 @@ This post outlines how an inner product space can be given a canonical topologic
 
 ## Inner Products
 
-> **Definition 1**. Let $V$ be a vector space over the field $\mathbb{R}$. A (real) inner product is any function $\langle \cdot, \cdot \rangle : V\to V\to \mathbb{R}$ satisting : for all $x,y,z\in V$ and $a,b\in \mathbb{R}$,
+> **Definition 1**. Let $V$ be a vector space over the field $\mathbb{R}$. A (real) inner product is any function $\langle \cdot, \cdot \rangle : V\times V\to \mathbb{R}$ satisting : for all $x,y,z\in V$ and $a,b\in \mathbb{R}$,
 > 
 > - <p style="text-align:left;">
         $\langle x,y \rangle = \langle y,x\rangle$ 
@@ -35,11 +35,7 @@ This post outlines how an inner product space can be given a canonical topologic
 >
 > We shall say : "Let $V$ be a (real) inner product space" to mean that $V$ is a vector space over $\mathbb{R}$ that is equipped with a (real) inner product.
 
-!!! note "Complex Inner Product Space?"
-
-    We emphasize "real" because inner products can also be defined over a complex vector space (a vector space $V$ over $\mathbb{C}$). In particular, a *complex* inner product is a function $\langle \cdot, \cdot \rangle: V\to V\to \mathbb{C}$ satisfying a slightly different set of properties. A complex inner product space is a complex vector space equipped with a complex inner product. While both real and complex inner product spaces are largely equal in terms of their behavior, there are some differences here and there. In this post, we shall ignore $\mathbb{C}$ such that any mention of a vector/inner product space shall only refer to *real* vector/inner product spaces.
-
-!!! note "Additional (quickfire) properties of inner product spaces :"
+!!! note "Additional (quickfire) properties of (real) inner product spaces :"
 
     It is easy to see that linearity is equivalent to the following two, simpler conditions :
 
@@ -58,13 +54,21 @@ This post outlines how an inner product space can be given a canonical topologic
 
     - $\langle 0,z \rangle = \langle z,0 \rangle = 0$
 
-    As a corollary, we have :
+    In particular :
 
     - $\langle x,x \rangle = 0 \iff x=0$
 
-    Proof. The backwards direction is immediate from the previous line. For the forward direction, consider the contrapositive of positive-definiteness : $\langle x,x \rangle \leq 0 \ \Longrightarrow \ x=0$. <span style="float:right;"> $\Box$ </span>
+    Proof. The backwards direction is immediate. The contrapositive of the forwards direction : $x\neq 0 \Rightarrow \langle x,x \rangle \neq 0$ is a direct consequence of positive-definiteness.
 
-    In other words, $\langle x,x \rangle \geq 0$ for all $x\in V$ with equality if and only if $x=0$.
+    As a corollary :
+
+    - $\langle x,x \rangle \geq 0$ for all $x\in V$ with equality if and only if $x=0$.
+
+### Complex Inner Product Space?
+
+We emphasize "real" because inner products can also be defined over a complex vector space (a vector space $V$ over $\mathbb{C}$). In particular, a *complex* inner product is a function $\langle \cdot, \cdot \rangle: V\times V\to \mathbb{C}$ satisfying a slightly different set of properties. A complex inner product space is a complex vector space equipped with a complex inner product. While both real and complex inner product spaces are largely equal in terms of their behavior, there are some differences here and there. 
+
+!!! warning "$\quad \ $ From now on, any mention of vector/inner product spaces shall specifically refer to their *real* versions."
 
 ## Norms
 
@@ -117,7 +121,7 @@ Proving the triangle inequality is not straightforward and some prior machinery 
 
     $$ \langle x,x\rangle \left(\langle x,x\rangle \langle y,y\rangle - \langle x,y\rangle^2\right) $$
 
-    as needed. <span style="float:right;"> $\Box$ </span> 
+    as needed.
 
 > **Theorem 1.1** (Cauchy-Schwartz Inequality). In an inner product space, for any vectors $x,y\in V$ we have
 >
@@ -135,33 +139,33 @@ Proving the triangle inequality is not straightforward and some prior machinery 
 
     $$ \langle x,y\rangle^2 \leq \langle x,x\rangle \langle y,y\rangle $$
 
-    as needed. <span style="float:right;"> $\Box$ </span> 
+    as needed. 
 
-!!! note "Note 1"
+By taking the positive square-root in the CS inequality, we obtain the following equivalent form :
 
-    By taking the positive square-root in the CS inequality, we obtain the following equivalent form :
+$$ |\langle x,y\rangle| \leq \Vert x\Vert \Vert y\Vert $$
 
-    $$ |\langle x,y\rangle| \leq \Vert x\Vert \Vert y\Vert $$
-
-The following theorem answers what it exactly means when 2 vectors achieve equality in the CS inequality :
+The next theorem answers what it exactly means when 2 vectors achieve equality in the CS inequality :
     
 > **Theorem 1.2** (Cauchy-Schwartz Inequality). In an inner product space, for any vectors $x,y\in V$ the following are equivalent :
 >
-> - $\langle x,y\rangle^2 = \langle x,x\rangle \langle y,y\rangle$
-> - $x=0$ OR $y=\frac{\langle x,y\rangle}{\langle x,x\rangle}x$
-> - $x=0$ OR there exists a scalar $k\in \mathbb{R}$ such that $y=kx$
+> 1. $\langle x,y\rangle^2 = \langle x,x\rangle \langle y,y\rangle$
+> 2. $x=0$ OR $y=\frac{\langle x,y\rangle}{\langle x,x\rangle}x$
+> 3. $x=0$ OR there exists a scalar $k\in \mathbb{R}$ such that $y=kx$
 
-??? note "Proof"
+$(2)\to (3)$ is obvious. As for the rest :
 
-    $(1)\to (2)$. We shall instead prove that $x\neq 0$ implies $y=\frac{\langle x,y\rangle}{\langle x,x\rangle}x$. By Lemma 1 : 
+??? note "Proof. $(1)\to (2)$"
+
+    We shall instead prove that $x\neq 0$ implies $y=\frac{\langle x,y\rangle}{\langle x,x\rangle}x$. By Lemma 1 : 
 
     $$ \langle w,w\rangle = \langle x,x\rangle(\langle x,x\rangle \langle y,y\rangle - \langle x,y\rangle^2) $$
 
-    but (1) implies that $\langle w,w\rangle = 0$ which implies that $w=0$ which means $\langle x,y \rangle x = \langle x,x\rangle y$. It suffices to divide both sides by $\langle x,x\rangle$ which we are allowed to do since $x\neq 0$ was assumed.
+    but (1) implies that $\langle w,w\rangle = 0$ which implies that $w=0$ which means $\langle x,y \rangle x = \langle x,x\rangle y$. It suffices to divide both sides by $\langle x,x\rangle$, noting that we are allowed to do so since $x\neq 0$ by assumption.
 
-    $(2)\to (3)$. Obvious
+??? note "Proof. $(3)\to (1)$"
 
-    $(3)\to (1)$. If $x=0$ then (1) is obvious. Otherwise, On the LHS : 
+    If $x=0$ then (1) is obvious. Otherwise, On the LHS : 
     
     $$\langle x,y\rangle^2 = \langle x, kx\rangle^2 = k^2\langle x,x\rangle^2 $$
 
@@ -169,7 +173,7 @@ The following theorem answers what it exactly means when 2 vectors achieve equal
 
     $$ \langle x,x\rangle \langle y,y\rangle = \langle x,x\rangle \langle kx,kx\rangle = k^2\langle x,x\rangle^2$$
 
-    Thus both sides are equal as needed. <span style="float:right;"> $\Box$ </span> 
+    Thus both sides are equal as needed.
 
 ## Triangle Inequality
 
@@ -182,9 +186,9 @@ $$ \begin{align*}
     &= (\Vert x\Vert +\Vert y\Vert)^2
 \end{align*} $$
 
-> **Definition 3**. In general, given a vector space $V$, a norm refers to any function $\Vert \cdot \Vert : V\to \mathbb{R}$ satisfying the 4 properties listed shortly after Definition 2. A vector space equipped with a norm is known as a normed space.
+> **Definition 3**. Given a vector space $V$, a norm refers to any function $\Vert \cdot \Vert : V\to \mathbb{R}$ satisfying the 4 properties listed shortly after Definition 2. A vector space equipped with a norm is known as a normed space.
 
-Thus we have shown that in an inner product space, $\Vert x\Vert = \sqrt{\langle x,x\rangle}$ defines a norm. In other words, an inner product space is automatically equipped with a norm that is naturally defined by its inner product. 
+What we have shown is that in any inner product space, $\Vert x\Vert := \sqrt{\langle x,x\rangle}$ defines a norm. In other words, an inner product space can (if necessary) be considered as a normed space (by equipping it with the norm defined above).
 
 ## Norm to Metric
 
@@ -205,21 +209,25 @@ $$ \Vert x-z \Vert = \Vert (x-y) + (y-z) \Vert \leq \Vert x-y \Vert + \Vert y-z 
 
 > **Definition 4**. In a metric space $X$ we define the open ball with center $p\in X$ and radius $r\in \mathbb{R}$ to be the subset containing all points $x\in X$ such that $d(x,p)<r$. We write $B(p,r) := \{x\in X \ | \ d(x,p)<r\}$ to denote this subset.
 
+<!-- -->
+
 > **Definition 5**. In a metric space $X$, a subset $A\subseteq X$ is said to be open iff for every $x\in A$ there exists a strictly positive $r\in \mathbb{R}$ such that $B(x,r)\subseteq A$. 
 
-To equip a set with a topology it suffices to specify which subsets are open (which we have already done) and then prove that the collection of open subsets satisfy the necessary topological properties : Let $\tau$ denote the collection of open subsets in a metric space $X$, then we should show that
+To equip a set with a topology it suffices to specify which subsets are open (which we have already done) and then prove that the collection of open subsets satisfy the necessary topological properties : 
 
-- $\varnothing, X \in \tau$
-- For any $S\subseteq \tau, \bigcup S \in \tau$
-- For any finite $S\subseteq \tau, \bigcap S\in \tau$
+> **Theorem 2**. Let $\tau$ denote the collection of open subsets in a metric space $X$, then :
+>
+> - $\varnothing, X \in \tau$
+> - For any $S\subseteq \tau, \ \bigcup S \in \tau$
+> - For any finite $S\subseteq \ \tau, \bigcap S\in \tau$
 
 ??? note "Proof"
 
-    - For the first property, note that $\varnothing$ is trivially open. Similarly, $X$ is open because for every $p\in X$ it is trivial that $B(p,1)\subseteq X$.
+    - For the first property, note that $\varnothing$ is trivially open. Similarly, $X$ is open because for every $p\in X$ we obviously have $B(p,1)\subseteq X$.
 
-    - For the second property, suppose that $x\in \bigcup S$, then $x\in S'$ for some $S'\in S$. Thus $S'$ is open so there exists an $r>0$ such that $B(x,r)\subseteq S'\subseteq \bigcup S$ so we are done.
+    - For the second property, suppose that $x\in \bigcup S$, then $x\in A$ for some $A\in S$. Thus $A$ is open so there exists an $r>0$ such that $B(x,r)\subseteq A\subseteq \bigcup S$ so we are done.
 
-    - For the third property, suppose that $x\in \bigcap S$, i.e. $x\in S'$ for every $S'\in S$. Each $S'$ is open and since $S$ is finite, we obtain a finite list of radii $r_1,r_2,\ldots,r_n>0$. Let $r_m$ be the minimum of these radii, then $B(r_m)\subseteq B(r_i)$ for all $i=1,2,\ldots,n$ meaning $B(r_m)\subseteq S'$ for every $S'\in S$ so that $B(r_m)\subseteq \bigcap S$ as needed.
+    - For the third property, suppose that $x\in \bigcap S$, i.e. $x\in A$ for every $A\in S$. Each $A$ is open and since $S$ is finite, we obtain a finite list of radii $r_1,r_2,\ldots,r_n>0$. Let $r_m$ be the minimum of these radii, then $B(r_m)\subseteq B(r_i)\subseteq A_i$ for all $i=1,2,\ldots,n$. Thus $B(r_m)\subseteq \bigcap S$ as needed.
 
 ## An Inner Product on $\mathbb{R}^n$
 
@@ -235,7 +243,7 @@ Let $x= (x_1,x_2,\ldots,x_n)$ and $y=(y_1,y_2,\ldots y_n)$. We define the inner 
 
     so that 
 
-    $$\langle x+y,z\rangle = \sum_{i=1}^n x_iz_i+y_iz_i = \sum_{i=1}^n x_iz_i + \sum_{i=1}^n y_iz_i = \langle x,z\rangle + \langle y,z\rangle \tag*{□}$$
+    $$\langle x+y,z\rangle = \sum_{i=1}^n x_iz_i+y_iz_i = \sum_{i=1}^n x_iz_i + \sum_{i=1}^n y_iz_i = \langle x,z\rangle + \langle y,z\rangle $$
 
 Specializing the CS inequality to the inner product on $\mathbb{R}^n$ we get the following inequality for free:
 
