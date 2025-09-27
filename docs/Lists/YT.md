@@ -102,6 +102,7 @@ title : Cool YT Channels
 - [squawkwardd](https://www.youtube.com/@squawkwardd)
 - [saintlycharles](https://www.youtube.com/@saintlycharles/videos)
 - [tofuny](https://www.youtube.com/@tofuny4370)
+- [Labirhin](https://www.youtube.com/@Labirhin)
 
 ## Travel / Vlog
 

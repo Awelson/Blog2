@@ -52,6 +52,7 @@ Most of these are NSFW so keep that in mind (for educational purposes only of co
 - [aarinfantasy](https://aarinfantasy.com/forum/forum.php) - BL
 - [Itazuraneko](https://itazuraneko.org/index.html)
 - [dl-raw](https://dl-raw.ac)
+- [rawlazy](https://rawlazy.io/)
 - [Bilingual Manga](https://bilingualmanga.org)
 - [Manga Zip](https://manga-zip.is/post) -> [alt](https://manga-zip.info/home.i1/)
 - [syosetsu](https://yomou.syosetu.com)
@@ -62,6 +63,7 @@ Most of these are NSFW so keep that in mind (for educational purposes only of co
 
 /// html | div[style='float: right; width: 50%;']
 
+- [rawfree](https://rawfree.me/)
 - [Alphapolis](https://www.alphapolis.co.jp)
 - [Dlraw](https://dlraw.to/raw/)
 - [rawkuma](https://rawkuma.com)
