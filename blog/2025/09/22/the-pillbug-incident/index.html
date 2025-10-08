@@ -1,0 +1,1082 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../21/inner-product-space-rightarrow-topology/">
+      
+      
+        <link rel="next" href="../../../10/01/%E8%90%BD%E8%AA%9E-rakugo/">
+      
+      
+      <link rel="icon" href="../../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.21">
+    
+    
+      
+        <title>The Pillbug Incident - AWelson's Blog</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.2a3383ac.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+      <link rel="stylesheet" href="../../../../../stylesheets/stylesheet.css">
+    
+      <link rel="stylesheet" href="../../../../../stylesheets/YTclips.css">
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#what-is-a-pillbug" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="AWelson&#39;s Blog" class="md-header__button md-logo" aria-label="AWelson's Blog" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AWelson's Blog
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              The Pillbug Incident
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="pink" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Welcome
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Blog
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../Lists/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Lists
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../Coding%20Cookbook/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Coding Cookbook
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="AWelson&#39;s Blog" class="md-nav__button md-logo" aria-label="AWelson's Blog" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    AWelson's Blog
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Welcome
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Blog
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../About/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../../archive/2025/10/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Archive
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../../category/japanese/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Categories
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../../../Lists/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Lists
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../../../Coding%20Cookbook/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Coding Cookbook
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-a-pillbug" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a pillbug?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#weathernews-live" class="md-nav__link">
+    <span class="md-ellipsis">
+      Weathernews LiVE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-pillbug-incident" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Pillbug Incident
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clip-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clip analysis
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Clip analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#part-1-the-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 1 : The Context
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-2-the-incident" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 2 : The Incident
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-3-wait-theres-more" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 3 : Wait? There's More?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#part-4-another-correction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 4 : Another Correction
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+  <div class="md-content md-content--post" data-md-component="content">
+    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner md-post">
+          <nav class="md-nav md-nav--primary">
+            <div class="md-post__back">
+              <div class="md-nav__title md-nav__container">
+                <a href="../../../../" class="md-nav__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+                  <span class="md-ellipsis">
+                    Back to index
+                  </span>
+                </a>
+              </div>
+            </div>
+            
+            <ul class="md-post__meta md-nav__list">
+              <li class="md-nav__item md-nav__item--section">
+                <div class="md-post__title">
+                  <span class="md-ellipsis">
+                    Metadata
+                  </span>
+                </div>
+                <nav class="md-nav">
+                  <ul class="md-nav__list">
+                    <li class="md-nav__item">
+                      <div class="md-nav__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
+                        <time datetime="2025-09-22 00:00:00+00:00" class="md-ellipsis">September 22, 2025</time>
+                      </div>
+                    </li>
+                    
+                    
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v15h3V3zm3 2 4 13 3-1-4-13zM5 5v13h3V5zM3 19v2h18v-2z"/></svg>
+                          <span class="md-ellipsis">
+                            in
+                            
+                              <a href="../../../../category/japanese/">Japanese</a></span>
+                        </div>
+                      </li>
+                    
+                    
+                      
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
+                          <span class="md-ellipsis">
+                            
+                              6 min read
+                            
+                          </span>
+                        </div>
+                      </li>
+                    
+                  </ul>
+                </nav>
+              </li>
+            </ul>
+            
+          </nav>
+          
+        </div>
+      </div>
+    </div>
+    <article class="md-content__inner md-typeset">
+      
+        
+  
+
+
+
+
+  <h1>The Pillbug Incident</h1>
+
+<h2 id="what-is-a-pillbug">What is a pillbug?</h2>
+<p>For those who do not know (because I sure as hell didn't), the <a href="https://en.wikipedia.org/wiki/Armadillidiidae">"pill bug"</a> is a common name given to the <em>Armadillidiidae</em> family of woodlice. The pill bug has the ability to roll into a ball, earning them the alternative (perhaps more familiar) name : roly-polies. </p>
+<!-- more -->
+
+<figure>
+<p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Armadillidium_vulgare_001.jpg/270px-Armadillidium_vulgare_001.jpg" /></p>
+<figcaption>
+<p>An image of a pill bug! Sorry if I grossed you out. You've probably seen or played with these as a kid, or hey... maybe I'm the only weird one here.</p>
+</figcaption>
+</figure>
+<p>Despite now being aware of what a pillbug is, I'm sure that you guys are no closer to knowing what <strong><em>"The Pillbug Incident"</em></strong> could possibly be referring to, but I am going to need you guys to be a bit more patient as I talk about a seemingly unrelated topic.</p>
+<h2 id="weathernews-live">Weathernews LiVE</h2>
+<p><a href="https://en.wikipedia.org/wiki/Weathernews_LiVE">Weathernews LiVE (WNL)</a> is a private Japanese weather report channel which primarily broadcasts through the internet (as opposed to the television, because I know some of you guys forgot those exist). For example, they sometimes broadcast live and upload clips of their broadcasts on their <a href="https://www.youtube.com/watch?v=OcB7Cp_igLw">YouTube channel</a>. </p>
+<p>WNL is massively popular for simply being a weather report channel, some of their clips have garnered more than 10 million views. Part of the reason why is because WNL's weather reporters are almost exclusively cute, young, females. WNL understands that the audience are watching for the personalities behind the screen as opposed to the weather news itself, and they lean into this by organizing fan meetup events, selling merchandise, etc.. Basically, these weatherwomen are being seen and treated the same way as any other idol. Japanalysis made a <a href="https://www.youtube.com/watch?v=z7QG9owYEUY">great video</a> on this topic, criticizing the normalization of this type of culture. Fortunately, this hotbed of a topic is not something we'll be delving towards; although the context may be helpful. </p>
+<h2 id="the-pillbug-incident">The Pillbug Incident</h2>
+<p>One of the most famous WNL clips (over 18 million views at the time of writing) is the "ダンゴムシ事件" (pillbug incident), a blooper where the weather caster Rinon Ohshima (大島璃音) mistakenly refers to her colleague, the meteorologist Yamaguchi Takehisa (山口剛央), as a "pillbug", leading to a funny exchange :   </p>
+<iframe 
+    id="player"
+    src="https://www.youtube.com/embed/tzLGA1-QWfU?enablejsapi=1">
+</iframe>
+
+<p>The only reason I thought to write about this "incident" is because this blooper is a great way to learn about Japanese particles. Afterall, the cause of Ohshima's unfortunate blunder is the result of an incorrect particle usage. </p>
+<h2 id="clip-analysis">Clip analysis</h2>
+<h3 id="part-1-the-context">Part 1 : The Context</h3>
+<p><span class="clickable" onclick="playSegment(0,7.6)"> Click to play segment (0:00-0:07) </span>
+<div class="highlight"><pre><span></span><code>大島 : 今日は結構気温東京上がりましたけどもダンゴムシはまだ今日は見当たらなかったですか？
+山口 : 今日は出なかったです。
+</code></pre></div></p>
+<p>The conversation that will eventually lead to the infamous "Pillbug Incident". Ohshima started by asking Yamaguchi if he was able to find any pillbugs today despite it getting hotter (in Tokyo), to which Yamaguchi replied that he wasn't able to, and the conversation continued on from there.</p>
+<p>To understand this bit of dialogue, you will need two pieces of context :</p>
+<div class="admonition note">
+<p class="admonition-title">Context 1</p>
+<p>The appearance of pillbugs is known to correlate with different weather conditions. For example, pillbugs prefer to live in cool, dark, and moist environments<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">3</a></sup>, so you are more likely to see them during or after it rains.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Context 2</p>
+<p>Yamaguchi is well known to be a data enthusiast, personally collecting all sorts of data ranging from insect activity to natural disasters<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">4</a></sup>. Ohshima asked if Yamaguchi was able to find any pillbugs today with this in mind. </p>
+</div>
+<h3 id="part-2-the-incident">Part 2 : The Incident</h3>
+<p><span class="clickable" onclick="playSegment(8.3,13)"> Click to play segment (0:08-0:13) </span></p>
+<div>
+<pre><code>大島 : さあ、ということでダンゴムシ<b>にも</b>ね、解説していただきましたけど。
+</code></pre>
+</div>
+<p>"Well, with that said, we've received an explanation from a pillbug as well...", said Ohshima, indirectly referring to Yamaguchi as a ダンゴムシ (pillbug in Japanese). Ohshima's blunder stems from mistakenly marking ダンゴムシ with the particle にも. </p>
+<p>In most cases, including this one, にも can be thought of as the particles に and も operating separately<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">1</a></sup>. That is to say, ダンゴムシ is marked twice, once by に and the second time by も. Marking an object with the particle も gives it a sense of "also", "another", "yet again", etc... For example :</p>
+<div class="highlight"><pre><span></span><code>「私もりんごが好き」: I too like apples 
+「りんごもすき」: I like apples too
+</code></pre></div>
+<p>In the first case 私 (I/me) is marked by も. You are proclaiming yourself as an (additional) member of the "apple-liker" group. You would say this when your friends are talking about how much they love apples, and you want to include yourself as a part of that. In the second case りんご (apple) is marked. You are proclaiming that apples, perhaps in addition to bananas, mangos, etc... are also a member of the "fruits-I-like" group.</p>
+<p>The particle に is more complex as it has many functions (7, according to the DOJG). In this specific instance に acts as :</p>
+<div class="admonition quote">
+<p class="admonition-title">From the Dictionary of Japanese Grammar (DOJG)<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">5</a></sup> : </p>
+<p>"A particle that indicates an agent or a source in passive, causative, もらう/てまらう and other receiving constructions"</p>
+</div>
+<p>Isolating the key parts of Ohshima's sentence, we get</p>
+<div class="highlight"><pre><span></span><code>大島 : [ダンゴムシ] [にも] [解説して] [いただきました]
+</code></pre></div>
+<p>いただきました is the past tense of the verb いただく, which means "to recieve". You've probably heard the phrase いただきます being used before eating a meal. In the context of a meal this basically means : "I shall humbly receive/accept the food that is in front of me". </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>いただく is no different to もらう apart from being more polite (it is the 謙譲語 of もらう)</p>
+</div>
+<p>A verb can be attached to いただく via its て-form to indicate the receival of an action. For example :</p>
+<div>
+<p><code>解説する (to explain) $\to$ 解説して + いただきました (received an explanation)</code></p>
+</div>
+<p>As discussed, に marks the agent/source of the action (解説する) that is being received. Thus :</p>
+<div>
+<p><code>ダンゴムシに(も)解説していたきました : (also) received an explanation from a pillbug</code></p>
+</div>
+<p>ダンゴムシ being marked with も indicates that the pillbug is part of a larger collection of things that you have received explanations from, or alternatively that the explanation from a pillbug is part of a larger series of events that happened. The second interpretation is probably more likely.</p>
+<p>And so that concludes the explanation behind the grammatical mishap that took the attention of more than 18 million people, <strong>the pillbug incident</strong>. </p>
+<hr />
+<h3 id="part-3-wait-theres-more">Part 3 : Wait? There's More?</h3>
+<p>What? You think we're done with learning about particles? We're just getting started. Yamaguchi was quick to correct Ohshima's mistake :</p>
+<p><span class="clickable" onclick="playSegment(13.5,18.5)"> Click to play segment (0:13-0:18) </span>
+<div class="highlight"><pre><span></span><code>山口 : ダンゴムシ”の”ですよね？
+大島 : あ、ダンゴムシ”の”。。。
+山口 : 私、ダンゴムシではない。。。
+</code></pre></div></p>
+<p>"You probably meant to say 「ダンゴムシ<strong>の</strong>」 (instead of にも) right?", asked Yamaguchi, understandably in disbelief after having just been referred to as a pillbug lol. The の-corrected sentence is then :</p>
+<div class="highlight"><pre><span></span><code>ダンゴムシの解説していただきました
+</code></pre></div>
+<p>At first glance, it appears that we have a <code>Noun + の + Verb</code> pattern, which strays away from the typical <code>Noun + の + Noun</code> that we are used to. After searching around for a bit, I have found at least one case (probably the only case) in which this construction is possible : In attributive clauses, の marks the agent performing an action that serves as an attribute of something else<sup id="fnref:5"><a class="footnote-ref" href="#fn:5">2</a></sup>. </p>
+<p>For example :</p>
+<div class="highlight"><pre><span></span><code>雪の降る夜 : A snowy night
+カナエの作ったネックレス : The necklace that Kanae made
+</code></pre></div>
+<p>The pattern is : <code>Noun1 + の + Verb + Noun2</code>, where <code>Noun1</code> is the performer of <code>Verb</code> and this serves as an attribute for <code>Noun2</code>. However <code>ダンゴムシの解説していただきました</code> does not have a <code>Noun2</code>. Does this mean that the の-corrected sentence is ungrammatical? Surely Yamaguchi's correction to Ohshima's grammar mistake can't yet again be another grammar mistake?!</p>
+<p>What we have overlooked is to understand that 解説する is a noun that has been "verbified" by the addition of する. That is to say 解説 is the noun "explanation" while 解説する is the verb "to explain". The idea is to treat「ダンゴムシの解説」as the noun "explanation about pillbugs" and observe that the addition of する turns it into the verb "to explain about pillbugs". </p>
+<p>Putting it all togther, ダンゴムシの解説していただきました means "(I) received an explanation about pillpugs" which was probably what Ohshima meant to say.</p>
+<h3 id="part-4-another-correction">Part 4 : Another Correction</h3>
+<p><span class="clickable" onclick="playSegment(23,37)"> Click to play segment (0:23-0:37) </span>
+<div class="highlight"><pre><span></span><code>大島 : 違う違う。山口さん、違いますよ。
+   : 山口さん、ダンゴムシ&quot;も&quot;解説していただきましたけどって。
+   : 言おうと思ったんですけども。私がちょっと色々間違えまして。
+</code></pre></div></p>
+<p>Ohshima reveals that she had intended to say 「ダンゴムシ<strong>も</strong>解説していただきました」 but a rougue "に" has slipped in by accident.</p>
+<p>We've already mentioned that a も-marked object is given a sense of "also", "another", "in addition", etc... This means that we can interpret the intended sentence as : "Pillbugs (among other things), I received an explanation". </p>
+<p>With regards to how the rougue "に" slipped in, Ohshima was probably thinking about saying :</p>
+<div class="highlight"><pre><span></span><code>ダンゴムシ(について)も解説いただきました
+</code></pre></div>
+<p>Which can be interpreted as "<strong>About</strong> pillbugs (among other things), I received an explanation", 「について」 meaning "about", "with regards to", etc... Ohshima then probably forgot to say the ついて part of について.</p>
+<h2 id="references">References</h2>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:3">
+<p><a href="https://selftaughtjapanese.com/2020/06/22/japanese-particle-combination-にも-ni-mo/">https://selftaughtjapanese.com/2020/06/22/japanese-particle-combination-にも-ni-mo/</a>&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:5">
+<p><a href="https://imabi.org/the-particle-の-ii/">https://imabi.org/the-particle-の-ii/</a>&#160;<a class="footnote-backref" href="#fnref:5" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:1">
+<p><a href="https://knowledge.carolina.com/discipline/life-science/pill-bug-behavior-choices/">https://knowledge.carolina.com/discipline/life-science/pill-bug-behavior-choices/</a>&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p><a href="https://dic.pixiv.net/a/ダンゴムシにも解説していただきました">https://dic.pixiv.net/a/ダンゴムシにも解説していただきました</a>&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:4">
+<p><a href="https://core6000.neocities.org/dojg/entries/100">https://core6000.neocities.org/dojg/entries/100</a>&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 8, 2025 15:54:01 UTC">October 8, 2025</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+
+  
+
+
+
+      
+    </article>
+  </div>
+
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.prune", "toc.follow"], "search": "../../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="../../../../../javascripts/katex.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+      
+        <script src="../../../../../javascripts/YTclips.js"></script>
+      
+    
+  </body>
+</html>
