@@ -43,6 +43,7 @@ title : DSSR
 - [xvzf](https://www.youtube.com/@xvzf8147)
 - [Very Normal](https://www.youtube.com/@very-normal)
 - [Riffomonas Project](https://www.youtube.com/@Riffomonas)
+- [Equitable Equations](https://www.youtube.com/@EquitableEquations)
 - [Simplistics (QuantPsych)](https://www.youtube.com/@simplistics_stats)
 - [PositPBC](https://www.youtube.com/@PositPBC)
 - [R Consortium](https://www.youtube.com/@RConsortium)
