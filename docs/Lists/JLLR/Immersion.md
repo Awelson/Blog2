@@ -132,7 +132,7 @@ A wide range of content including : gameplay, vlogs, challenges, etc.. Most of w
 /// html | div[style='clear: both;']
 ///
 
-> VTuber clip channels are also a good source, just search up : `[Name of VTUBER] + 切り抜き / 文字起こし / 手書き` and you should be able to find some good stuff.
+> VTuber clip channels are also a good source, just search up : `[Name of VTUBER] + 切り抜き / 文字起こし / 手書き` and you should be able to find some good stuff. Some good examples are [nemu-nemu-nyanko](https://www.youtube.com/@sleepysleepynya) and [NijisanjiENClip_and_Translation](https://www.youtube.com/@2434ENhonyaku).
 
 ### Misc
 

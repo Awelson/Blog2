@@ -148,6 +148,7 @@ In google, twitter, etc.. Use quotation marks to surround a word/phrase to find 
 - [Cure Dolly](https://www.youtube.com/@organicjapanesewithcuredol49)
 - [Maruhi Academy](https://www.youtube.com/@maruhigakuen)
 - [Scripting Japan](https://www.youtube.com/@scriptingjapan)
+- [Yurugengo](https://www.youtube.com/@yurugengo)
 
 ///
 
