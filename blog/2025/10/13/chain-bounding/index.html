@@ -1,0 +1,1022 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../01/%E8%90%BD%E8%AA%9E-rakugo/">
+      
+      
+      
+      <link rel="icon" href="../../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
+    
+    
+      
+        <title>Chain Bounding - AWelson's Blog</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+      <link rel="stylesheet" href="../../../../../stylesheets/stylesheet.css">
+    
+      <link rel="stylesheet" href="../../../../../stylesheets/YTclips.css">
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#the-greatest-good-chain" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="AWelson&#39;s Blog" class="md-header__button md-logo" aria-label="AWelson's Blog" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AWelson's Blog
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Chain Bounding
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="pink" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Welcome
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Blog
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../Lists/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Lists
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../Coding%20Cookbook/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Coding Cookbook
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="AWelson&#39;s Blog" class="md-nav__button md-logo" aria-label="AWelson's Blog" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    AWelson's Blog
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Welcome
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Blog
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../About/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../../archive/2025/10/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Archive
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../../category/japanese/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Categories
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../../../Lists/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Lists
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../../../../Coding%20Cookbook/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Coding Cookbook
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-greatest-good-chain" class="md-nav__link">
+    <span class="md-ellipsis">
+      The greatest good chain
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chain-bounding-and-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chain Bounding and Applications
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+  <div class="md-content md-content--post" data-md-component="content">
+    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner md-post">
+          <nav class="md-nav md-nav--primary">
+            <div class="md-post__back">
+              <div class="md-nav__title md-nav__container">
+                <a href="../../../../" class="md-nav__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+                  <span class="md-ellipsis">
+                    Back to index
+                  </span>
+                </a>
+              </div>
+            </div>
+            
+            <ul class="md-post__meta md-nav__list">
+              <li class="md-nav__item md-nav__item--section">
+                <div class="md-post__title">
+                  <span class="md-ellipsis">
+                    Metadata
+                  </span>
+                </div>
+                <nav class="md-nav">
+                  <ul class="md-nav__list">
+                    <li class="md-nav__item">
+                      <div class="md-nav__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
+                        <time datetime="2025-10-13 00:00:00+00:00" class="md-ellipsis">October 13, 2025</time>
+                      </div>
+                    </li>
+                    
+                    
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v15h3V3zm3 2 4 13 3-1-4-13zM5 5v13h3V5zM3 19v2h18v-2z"/></svg>
+                          <span class="md-ellipsis">
+                            in
+                            
+                              <a href="../../../../category/maths/">Maths</a></span>
+                        </div>
+                      </li>
+                    
+                    
+                      
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
+                          <span class="md-ellipsis">
+                            
+                              11 min read
+                            
+                          </span>
+                        </div>
+                      </li>
+                    
+                  </ul>
+                </nav>
+              </li>
+            </ul>
+            
+          </nav>
+          
+        </div>
+      </div>
+    </div>
+    <article class="md-content__inner md-typeset">
+      
+        
+  
+
+
+
+
+  <h1>Chain Bounding</h1>
+
+<p>This will basically be an annotated copy of some of the relevant sections in Guillermo and Pedro's <a href="https://arxiv.org/pdf/2404.11638">paper on chain bounding</a> in ArXiv. Along the way, I will be filling in some gaps in their proofs/explanations. Whenever I do this, my own words will be placed in an info box.</p>
+<!-- more -->
+
+<h2 id="the-greatest-good-chain">The greatest good chain</h2>
+<p>We introduce some notation. Let <span class="arithmatex">\(P\)</span> be a poset and <span class="arithmatex">\(C\subseteq P\)</span>; we say that <span class="arithmatex">\(s\in P\)</span> is a <em>strict upper bound</em> of <span class="arithmatex">\(C\)</span>  if <span class="arithmatex">\(\forall c\in C,\ c&lt;s\)</span>. Furthermore, if <span class="arithmatex">\(S\subseteq C\)</span>, we say that <span class="arithmatex">\(S\)</span> is an <em>initial segment</em> of <span class="arithmatex">\(C\)</span> (<span class="arithmatex">\(S\sqsubseteq C\)</span>) if for all <span class="arithmatex">\(x\in C\)</span>, <span class="arithmatex">\(x\leq y \in S\)</span> implies <span class="arithmatex">\(x\in S\)</span>. We will usually omit the word "initial" and simply say "<span class="arithmatex">\(S\)</span> is a segment of <span class="arithmatex">\(C\)</span>". The strict version of the segment relation is denoted by <span class="arithmatex">\(S\sqsubset C\)</span>, that is, <span class="arithmatex">\(S\sqsubseteq C\)</span> and <span class="arithmatex">\(S\neq C\)</span>. Finally, <span class="arithmatex">\(\mathcal{P}(X)\)</span> denotes the powerset of the set <span class="arithmatex">\(X\)</span>.</p>
+<details class="note">
+<summary>Definition (Chain)</summary>
+<p>The authors perhaps forgot to include the definition of a chain? A subset <span class="arithmatex">\(C\subseteq P\)</span> is said to be a <em>chain</em> if for all <span class="arithmatex">\(x,y\in C\)</span> : either <span class="arithmatex">\(x\leq y\)</span> or <span class="arithmatex">\(y\leq x\)</span>. Another way to state this is that every pair of elements from <span class="arithmatex">\(C\)</span> has to be <em>comparable</em>. I will also add that any subset of a chain is itself a chain. This is simple enough to not warrant proving, but important enough to state.</p>
+</details>
+<details class="note">
+<summary>Definition (Segment)</summary>
+<p>I will add some points to the definition of a segment. To be more explicit : Let <span class="arithmatex">\(C\subseteq P\)</span>, then a subset <span class="arithmatex">\(S\subseteq C\)</span> is said to be a segment of <span class="arithmatex">\(C\)</span> (denoted <span class="arithmatex">\(S\sqsubseteq C\)</span>) if </p>
+<div class="arithmatex">\[\forall x\in C, \forall y\in S, \ x\leq y \Rightarrow x\in S \tag{1}\]</div>
+<p>Note the precondition that <span class="arithmatex">\(S\subseteq C\)</span>. What we really mean when we say that <span class="arithmatex">\(S\sqsubseteq C\)</span> are two things : that both <span class="arithmatex">\(S\subseteq C\)</span> and (1) are satisfied. Similarly, <span class="arithmatex">\(S\sqsubset C\)</span> means : <span class="arithmatex">\(S\subset C\)</span> and (1), or alternatively : both <span class="arithmatex">\(S\sqsubseteq C\)</span> and <span class="arithmatex">\(S\neq C\)</span> hold.</p>
+</details>
+<blockquote>
+<p><strong>Definition 1.</strong> Let <span class="arithmatex">\(g: \mathcal{P}(P) \to \mathcal{P}(P)\)</span> be given. We say that a chain <span class="arithmatex">\(C\subseteq P\)</span> is <em>good for</em> <span class="arithmatex">\(g\)</span> if for all <span class="arithmatex">\(S\sqsubset C\)</span> we have <span class="arithmatex">\(S\sqsubset g(S) \sqsubseteq C\)</span>. When understood from the context, we omit “for <span class="arithmatex">\(g\)</span>”. </p>
+</blockquote>
+<p>We have the following key result :</p>
+<blockquote>
+<p><strong>Lemma 2.</strong> (Comparability) Let <span class="arithmatex">\(P\)</span> be a poset and <span class="arithmatex">\(g: \mathcal{P}(P) \to \mathcal{P}(P)\)</span>. If <span class="arithmatex">\(C_1\)</span> and <span class="arithmatex">\(C_2\)</span> are good chains, one is a segment of the other.</p>
+</blockquote>
+<p><em>Proof.</em> Let <span class="arithmatex">\(\mathcal{S}\)</span> be the family of mutual segments of both <span class="arithmatex">\(C_1\)</span> and <span class="arithmatex">\(C_2\)</span>. Hence <span class="arithmatex">\(\bigcup \mathcal{S}\)</span> is also a mutual segment. If <span class="arithmatex">\(\bigcup \mathcal{S}\)</span> is different from both <span class="arithmatex">\(C_1\)</span> and <span class="arithmatex">\(C_2\)</span>, then <span class="arithmatex">\(g(\bigcup \mathcal{S})\)</span> should be a mutual segment since both are good; but this contradicts the fact that <span class="arithmatex">\(g(\bigcup \mathcal{S})\not\subseteq\bigcup \mathcal{S}\)</span>.</p>
+<details class="note">
+<summary>Prepwork (Lemma 2.1)</summary>
+<blockquote>
+<p><strong>Lemma 2.1.</strong> Let <span class="arithmatex">\(C\subseteq P\)</span> and <span class="arithmatex">\(F\)</span> be some collection of segments of <span class="arithmatex">\(C\)</span>, that is to say for each <span class="arithmatex">\(S\in F, S\sqsubseteq C\)</span>. Then <span class="arithmatex">\(\bigcup F \sqsubseteq C\)</span>.</p>
+</blockquote>
+<p><em>Proof.</em> First, we prove that <span class="arithmatex">\(\bigcup F \subseteq C\)</span>. Let <span class="arithmatex">\(z\in \bigcup F\)</span>, then <span class="arithmatex">\(z\in S\)</span> for some <span class="arithmatex">\(S\in F\)</span>. By definition, <span class="arithmatex">\(S\sqsubseteq C\)</span>, thus <span class="arithmatex">\(z\in S\subseteq C\)</span> as needed. Next, we shall prove : <span class="arithmatex">\(\forall x\in C, \forall y\in \bigcup F, \ x \leq y \Rightarrow x\in \bigcup F\)</span>. Let <span class="arithmatex">\(x\in C\)</span> and <span class="arithmatex">\(y\in \bigcup F\)</span> and assume <span class="arithmatex">\(x\leq y\)</span>. Then <span class="arithmatex">\(y\in S\)</span> for some <span class="arithmatex">\(S\in F\)</span>. By definition, <span class="arithmatex">\(S\sqsubseteq C\)</span>, thus <span class="arithmatex">\(x\in S\subseteq \bigcup F\)</span> as needed.  </p>
+</details>
+<details class="note">
+<summary>Proof (my version)</summary>
+<p><em>Proof.</em> Let <span class="arithmatex">\(\mathcal{S}\)</span> be the family of <em>all</em> mutual segments of both <span class="arithmatex">\(C_1\)</span> and <span class="arithmatex">\(C_2\)</span>. By Lemma 2.1, <span class="arithmatex">\(\bigcup\mathcal{S}\sqsubseteq C_1\)</span> and <span class="arithmatex">\(\bigcup\mathcal{S}\sqsubseteq C_2\)</span>. Thus, <span class="arithmatex">\(\bigcup\mathcal{S}\)</span> is also a mutual segment, i.e. <span class="arithmatex">\(\bigcup\mathcal{S}\in \mathcal{S}\)</span>, in particular it is the largest mutual segment in the sense that for any mutual segment <span class="arithmatex">\(S\in \mathcal{S}, \ S\subseteq \bigcup \mathcal{S}\)</span>. </p>
+<p>I claim that either <span class="arithmatex">\(\bigcup\mathcal{S}\)</span> is either equal to <span class="arithmatex">\(C_1\)</span> or to <span class="arithmatex">\(C_2\)</span>. Suppose both are not true. Then <span class="arithmatex">\(\bigcup\mathcal{S} \sqsubset C_1, C_2\)</span> and since both are good chains, <span class="arithmatex">\(\bigcup\mathcal{S}\sqsubset g(\bigcup\mathcal{S}) \sqsubseteq C_1, C_2\)</span>. Thus <span class="arithmatex">\(g(\bigcup\mathcal{S})\)</span> is a mutual segment, in particular <span class="arithmatex">\(g(\bigcup\mathcal{S})\subseteq \bigcup\mathcal{S}\)</span>, but this contradicts <span class="arithmatex">\(\bigcup\mathcal{S}\sqsubset g(\bigcup\mathcal{S})\)</span>. </p>
+</details>
+<blockquote>
+<p><strong>Lemma 3.</strong> The union of a family <span class="arithmatex">\(\mathcal{F}\)</span> of good chains is a good chain.</p>
+</blockquote>
+<p><em>Proof.</em> The union <span class="arithmatex">\(U := \bigcup \mathcal{F}\)</span> is a chain by comparability. Note that every good chain <span class="arithmatex">\(D\)</span> such that <span class="arithmatex">\(D\subseteq U\)</span> is a segment of <span class="arithmatex">\(U\)</span> : Suppose that <span class="arithmatex">\(c\in U\)</span> and <span class="arithmatex">\(c\leq d\in D\)</span>. Then <span class="arithmatex">\(c\in C\)</span> for some good <span class="arithmatex">\(C\in\mathcal{F}\)</span>. If <span class="arithmatex">\(C\)</span> is a segment of <span class="arithmatex">\(D\)</span>, we have <span class="arithmatex">\(c\in D\)</span> and are done. Otherwise, the converse relation holds by Comparability and then we also have <span class="arithmatex">\(c\in D\)</span>.</p>
+<p>We will see that <span class="arithmatex">\(U\)</span> is good. Let <span class="arithmatex">\(S\subset U\)</span> be a proper segment of <span class="arithmatex">\(U\)</span>. Then, there exists <span class="arithmatex">\(d\in U\)</span> such that <span class="arithmatex">\(\forall c\in S,\; c&lt;d\)</span>. Let <span class="arithmatex">\(D\)</span> be a good chain such that <span class="arithmatex">\(d\in D\)</span>. Since <span class="arithmatex">\(D\)</span> is a segment of <span class="arithmatex">\(U\)</span>, all those <span class="arithmatex">\(c\)</span> belong to <span class="arithmatex">\(D\)</span>. We conclude <span class="arithmatex">\(S\subseteq D\)</span>, and since  <span class="arithmatex">\(S\)</span> is a segment of <span class="arithmatex">\(U\)</span>, it is a segment of <span class="arithmatex">\(D\)</span> and it is proper because <span class="arithmatex">\(d\in D \setminus S\)</span>. Then <span class="arithmatex">\(g(S)\)</span> is segment of <span class="arithmatex">\(D\)</span>, and hence <span class="arithmatex">\(g(S)\)</span> is a segment of <span class="arithmatex">\(U\)</span>.  </p>
+<details class="note">
+<summary>Prepwork (Lemma 3.1)</summary>
+<blockquote>
+<p><em>Lemma 3.1.</em> Let <span class="arithmatex">\(C\)</span> be a chain and let <span class="arithmatex">\(S\sqsubset C\)</span> be a proper initial segment, then there exists a <span class="arithmatex">\(c\in C\)</span> such that <span class="arithmatex">\(c\)</span> is a strict upper bound of <span class="arithmatex">\(S\)</span>.</p>
+</blockquote>
+<p><em>Proof.</em> Since <span class="arithmatex">\(S\subset C\)</span>, we can choose a <span class="arithmatex">\(c\)</span> such that <span class="arithmatex">\(c\in C\)</span> and <span class="arithmatex">\(c\notin S\)</span>. The claim is that <span class="arithmatex">\(c\)</span> is a strict upper bound of <span class="arithmatex">\(S\)</span>. Let <span class="arithmatex">\(s\in S\)</span>, then since <span class="arithmatex">\(s,c\in C\)</span> and <span class="arithmatex">\(C\)</span> is a chain, either <span class="arithmatex">\(s\leq c\)</span> or <span class="arithmatex">\(c\leq s\)</span>. If <span class="arithmatex">\(s\leq c\)</span> then we are done. If <span class="arithmatex">\(c\leq s\)</span> then <span class="arithmatex">\(S\sqsubset C\)</span> implies that <span class="arithmatex">\(c\in S\)</span> which is a contradiction so we are done.</p>
+</details>
+<details class="note">
+<summary>Prepwork (Lemma 3.2)</summary>
+<blockquote>
+<p><em>Lemma 3.2.</em> For any subsets <span class="arithmatex">\(A, B, C\)</span> of a poset <span class="arithmatex">\(P\)</span>, if <span class="arithmatex">\(A\sqsubseteq B\sqsubseteq C\)</span> then <span class="arithmatex">\(A\sqsubseteq C\)</span>.</p>
+</blockquote>
+<p><em>Proof.</em> It is obvious that <span class="arithmatex">\(A\subseteq C\)</span>. Now let <span class="arithmatex">\(x\in C\)</span> and <span class="arithmatex">\(y\in A\)</span> such that <span class="arithmatex">\(x\leq y\)</span>. Our goal is to show that <span class="arithmatex">\(x\in A\)</span>. We know that <span class="arithmatex">\(y\in B\)</span> and so <span class="arithmatex">\(B\sqsubseteq C\)</span> implies <span class="arithmatex">\(x\in B\)</span>. And finally <span class="arithmatex">\(A\sqsubseteq B\)</span> implies <span class="arithmatex">\(x\in A\)</span> as needed.</p>
+</details>
+<details class="note">
+<summary>Proof (my version)</summary>
+<p>First, we will show that the union <span class="arithmatex">\(U := \bigcup \mathcal{F}\)</span> is a chain. Let <span class="arithmatex">\(x,y\in U\)</span>, then there are <span class="arithmatex">\(C_1,C_2\)</span> for which <span class="arithmatex">\(x\in C_1\)</span> and <span class="arithmatex">\(y\in C_2\)</span>. By comparability and WLOG let <span class="arithmatex">\(C_1\sqsubseteq C_2\)</span>. Then both <span class="arithmatex">\(x,y\in C_2\)</span> and since <span class="arithmatex">\(C_2\)</span> is chain, both <span class="arithmatex">\(x,y\)</span> are comparable, thus <span class="arithmatex">\(U\)</span> is a chain.</p>
+<p>Next, we will prove an intermediary result : Any good chain <span class="arithmatex">\(D\subseteq U\)</span> is also an initial segment of <span class="arithmatex">\(U\)</span>.</p>
+<p>Let <span class="arithmatex">\(c\in U\)</span> and <span class="arithmatex">\(d\in D\)</span> be such that <span class="arithmatex">\(c\leq d\)</span>. Our goal is to show that <span class="arithmatex">\(c\in D\)</span>. There has to be some good chain <span class="arithmatex">\(C\in \mathcal{F}\)</span> for which <span class="arithmatex">\(c\in C\)</span>. Now we have two good chains <span class="arithmatex">\(C,D\)</span> so we can apply comparability. There are two cases :</p>
+<ul>
+<li><span class="arithmatex">\(D\sqsubseteq C\)</span> : If so, then <span class="arithmatex">\(c\leq d\)</span> implies <span class="arithmatex">\(c\in D\)</span>.</li>
+<li><span class="arithmatex">\(C\sqsubseteq D\)</span> : If so, then <span class="arithmatex">\(c\in C\subseteq D\)</span>.</li>
+</ul>
+<p>In both cases, <span class="arithmatex">\(c\in D\)</span> so we are done. Now we prove that <span class="arithmatex">\(U\)</span> is good. Let <span class="arithmatex">\(S\sqsubset U\)</span> be a proper segment of <span class="arithmatex">\(U\)</span>. By Lemma 3.1 there exists a <span class="arithmatex">\(d\in U\)</span> such that <span class="arithmatex">\(d\)</span> is a strict upper bound of <span class="arithmatex">\(S\)</span>. There is a good chain <span class="arithmatex">\(D\in \mathcal{F}\)</span> such that <span class="arithmatex">\(d\in D\)</span>. We will now prove that <span class="arithmatex">\(S\)</span> is a proper segment of <span class="arithmatex">\(D\)</span> :</p>
+<ul>
+<li>By our intermediary result, <span class="arithmatex">\(D\sqsubseteq U\)</span>. Let <span class="arithmatex">\(c\in S\)</span>, then <span class="arithmatex">\(c&lt;d\)</span> and <span class="arithmatex">\(D\sqsubseteq U\)</span> implies <span class="arithmatex">\(c\in D\)</span>. Thus <span class="arithmatex">\(S\subseteq D\)</span>.</li>
+<li>Let <span class="arithmatex">\(x\in D\)</span> and <span class="arithmatex">\(y\in S\)</span> such that <span class="arithmatex">\(x\leq y\)</span>, we have to show that <span class="arithmatex">\(x\in S\)</span>. Notice that <span class="arithmatex">\(x\in U\)</span> and so <span class="arithmatex">\(S\sqsubset U\)</span> implies that <span class="arithmatex">\(x\in S\)</span> as needed.</li>
+<li>Note that <span class="arithmatex">\(d\in D\)</span> and <span class="arithmatex">\(d\notin S\)</span> since it is a strict upper bound of <span class="arithmatex">\(S\)</span>. Thus <span class="arithmatex">\(D\neq S\)</span>.</li>
+</ul>
+<p>Since <span class="arithmatex">\(D\)</span> is a good chain and <span class="arithmatex">\(S\sqsubset D\)</span>, we have <span class="arithmatex">\(S\sqsubset g(S)\sqsubseteq D\)</span>. We combine this with the fact that <span class="arithmatex">\(D\sqsubseteq U\)</span> and Lemma 3.2 to get <span class="arithmatex">\(S\sqsubset g(S)\sqsubseteq U\)</span> as required. Thus <span class="arithmatex">\(U\)</span> is good.</p>
+</details>
+<p>By considering the union of <em>all</em> good chains, we readily obtain :</p>
+<blockquote>
+<p><strong>Theorem 4.</strong> (Greatest Good Chain). Let <span class="arithmatex">\(P\)</span> be a poset and <span class="arithmatex">\(g: \mathcal{P}(P) \to \mathcal{P}(P)\)</span>. The family of all good
+  chains has a maximum under inclusion.</p>
+</blockquote>
+<details class="note">
+<summary>Proof (my version)</summary>
+<p>More explicitly : Let <span class="arithmatex">\(\mathcal{G}\)</span> be the family of all good chains for a given poset <span class="arithmatex">\(P\)</span> and function <span class="arithmatex">\(g\)</span>. We need to prove that there exists a chain <span class="arithmatex">\(M\in \mathcal{G}\)</span> such that for any other good chain <span class="arithmatex">\(C\in \mathcal{G}, C\subseteq M\)</span>.</p>
+<p>I claim that <span class="arithmatex">\(M = \bigcup \mathcal{G}\)</span> works. By Lemma 3, <span class="arithmatex">\(M\)</span> is a good chain. Furthermore, for any <span class="arithmatex">\(C\in \mathcal{G}\)</span>, by definition <span class="arithmatex">\(C\subseteq \bigcup \mathcal{G} = M\)</span>. Thus <span class="arithmatex">\(M\)</span> is the "maximum" element we are looking for. </p>
+</details>
+<h2 id="chain-bounding-and-applications">Chain Bounding and Applications</h2>
+<p>The following lemma is the key to all of what follows. In some sense, it might be regarded as a non-<span class="arithmatex">\(AC\)</span> version of Zorn's lemma.</p>
+<blockquote>
+<p><strong>Lemma 5.</strong> (Chain Bounding). Let <span class="arithmatex">\(P\)</span> be a poset. There is no assignment of a strict upper bound to each chain in <span class="arithmatex">\(P\)</span>.</p>
+</blockquote>
+<p><em>Proof.</em> Assume, by way of contradiction, that <span class="arithmatex">\(f(C)\)</span> is a strict upper bound of <span class="arithmatex">\(C\)</span> for each chain <span class="arithmatex">\(C\subseteq P\)</span>. Hence <span class="arithmatex">\(C\)</span> is a proper segment of <span class="arithmatex">\(g(C) := C\cup \{f(C)\}\)</span>; extend this <span class="arithmatex">\(g\)</span> arbitrarily to the rest of the subsets of <span class="arithmatex">\(P\)</span>. By Theorem 4, there exists a greatest good chain <span class="arithmatex">\(U\)</span> for <span class="arithmatex">\(g\)</span>. But this is a contradiction, since <span class="arithmatex">\(g(U)\)</span> is easily seen to be a good chain, but <span class="arithmatex">\(g(U)\not\subseteq U\)</span>.</p>
+<details class="note">
+<summary>Proof (my version)</summary>
+<p>We prove this by contradiction. Suppose each chain <span class="arithmatex">\(C\)</span> in <span class="arithmatex">\(P\)</span> is associated with a strict upper bound which we denote <span class="arithmatex">\(f(C)\)</span>. We define a function <span class="arithmatex">\(g:\mathcal{P}(P)\to \mathcal{P}(P)\)</span> where</p>
+<div class="arithmatex">\[ g(C) := \begin{cases}
+    C\cup \{f(C)\} &amp;, \text{ if } C \text{ is a chain} \\
+    \varnothing &amp;, \text{ otherwise}
+\end{cases} \]</div>
+<p>By Theorem 4 there exists a greatest good chain <span class="arithmatex">\(U\)</span> for <span class="arithmatex">\(g\)</span>. We will now prove that <span class="arithmatex">\(g(U)\)</span> is a good chain. That <span class="arithmatex">\(g(U)\)</span> is a chain is easy to show and I will leave you to figure out the details for yourself.</p>
+<blockquote>
+<p><strong>Lemma 5.1.</strong> We will show that every chain <span class="arithmatex">\(C\)</span> is a proper segment of <span class="arithmatex">\(g(C)\)</span>. </p>
+<ul>
+<li><em>Proof.</em> Obviously <span class="arithmatex">\(C\subset g(C)\)</span>. Now let <span class="arithmatex">\(x\in g(C)\)</span> and <span class="arithmatex">\(y\in C\)</span> be such that <span class="arithmatex">\(x\leq y\)</span>. Our goal is to show that <span class="arithmatex">\(x\in C\)</span>. Suppose <span class="arithmatex">\(x\notin C\)</span> then <span class="arithmatex">\(x=f(C)\)</span>, but this contradicts <span class="arithmatex">\(x\leq y\)</span>, thus we must have <span class="arithmatex">\(x\in C\)</span> as required.</li>
+</ul>
+<p><strong>Lemma 5.2.</strong> Let <span class="arithmatex">\(S\)</span> be a proper segment of <span class="arithmatex">\(g(U)\)</span>, we will show that <span class="arithmatex">\(S\sqsubseteq U\)</span>. </p>
+<ul>
+<li><em>Proof.</em> Recall that <span class="arithmatex">\(g(U) = U\cup \{f(U)\}\)</span> by definition. We start by showing that <span class="arithmatex">\(f(U)\not\in S\)</span>. If it is, then <span class="arithmatex">\(S\sqsubset g(U)\)</span> and the fact that <span class="arithmatex">\(u\leq f(U)\)</span> for all <span class="arithmatex">\(u\in g(U)\)</span> would imply that <span class="arithmatex">\(u\in S\)</span> for all <span class="arithmatex">\(u\in g(U)\)</span>. Thus <span class="arithmatex">\(S=g(U)\)</span> but this contradicts <span class="arithmatex">\(S\)</span> being a proper segment. Thus, <span class="arithmatex">\(S\subseteq U\)</span>. Now let <span class="arithmatex">\(x\in U\)</span> and <span class="arithmatex">\(y\in S\)</span> such that <span class="arithmatex">\(x\leq y\)</span>. Notice that <span class="arithmatex">\(x\in g(U)\)</span> and <span class="arithmatex">\(S\sqsubset g(U)\)</span>, thus <span class="arithmatex">\(x\in S\)</span> and hence <span class="arithmatex">\(S\sqsubseteq U\)</span> as required.</li>
+</ul>
+</blockquote>
+<p>We now show that <span class="arithmatex">\(g(U)\)</span> is good. Let <span class="arithmatex">\(S\)</span> be a proper segment of <span class="arithmatex">\(g(U)\)</span>, then by Lemma 5.2, <span class="arithmatex">\(S\sqsubseteq U\)</span>. By definition, either <span class="arithmatex">\(S=U\)</span> or <span class="arithmatex">\(S\sqsubset U\)</span>. </p>
+<ul>
+<li>
+<p>Case 1 (<span class="arithmatex">\(S=U\)</span>) : By Lemma 5.1, <span class="arithmatex">\(U\sqsubset g(U)\)</span> and obviously <span class="arithmatex">\(g(U)\sqsubseteq g(U)\)</span>, thus <span class="arithmatex">\(g(U)\)</span> is good.</p>
+</li>
+<li>
+<p>Case 2 (<span class="arithmatex">\(S\sqsubset U\)</span>) : Since <span class="arithmatex">\(U\)</span> is good, <span class="arithmatex">\(S \sqsubset g(S)\sqsubseteq U\)</span>. Furthermore, we have <span class="arithmatex">\(U\sqsubset g(U)\)</span> from Lemma 5.1. Applying Lemma 3.2 gives <span class="arithmatex">\(S \sqsubset g(S)\sqsubseteq g(U)\)</span>, thus <span class="arithmatex">\(g(U)\)</span> is good.</p>
+</li>
+</ul>
+<p>Since we have shown that <span class="arithmatex">\(g(U)\)</span> is a good chain, we must have <span class="arithmatex">\(g(U)\subseteq U\)</span> by maximality of <span class="arithmatex">\(U\)</span>, but <span class="arithmatex">\(g(U)\)</span> has to be strictly larger than <span class="arithmatex">\(U\)</span> by definition of <span class="arithmatex">\(g\)</span>, and thus we have our contradiction.</p>
+</details>
+<p>The wording of the Chain Bounding Lemma is a bit awkward, since it is actually a negation. However, if we now invoke <span class="arithmatex">\(AC\)</span>, we get the following more natural statement.</p>
+<blockquote>
+<p><strong>Lemma 6.</strong> (Unbounded Chain). Assume <span class="arithmatex">\(AC\)</span>. For every poset <span class="arithmatex">\(P\)</span> there exists a chain <span class="arithmatex">\(C\subseteq P\)</span> with no strict upper bound.</p>
+</blockquote>
+<p><em>Proof.</em> By way of contradiction, assume that for every chain <span class="arithmatex">\(C\subseteq P\)</span> there exists a strict upper bound. Using <span class="arithmatex">\(AC\)</span>, let <span class="arithmatex">\(f\)</span> assign to each <span class="arithmatex">\(C\)</span> such a bound. But this contradicts Chain Bounding.</p>
+<blockquote>
+<p><strong>Corollary 7.</strong> (Zorn). If a poset <span class="arithmatex">\(P\)</span> contains an upper bound for each chain, it has a maximal element.</p>
+</blockquote>
+<p><em>Proof.</em> By the Unbounded Chain lemma, take <span class="arithmatex">\(C\subseteq P\)</span> without strict upper bounds. Then any upper bound of <span class="arithmatex">\(C\)</span> must be maximal in <span class="arithmatex">\(P\)</span>.</p>
+<details class="note">
+<summary>Proof (my version)</summary>
+<p>I will just be clarifying some points. By "maximal in <span class="arithmatex">\(P\)</span>" we mean a point <span class="arithmatex">\(x\in P\)</span> for which there cannot exist a <span class="arithmatex">\(y\in P\)</span> for which <span class="arithmatex">\(x&lt;y\)</span>. <span class="arithmatex">\(C\)</span> has an upper bound by assumption, call it <span class="arithmatex">\(u\)</span>. Now suppose there is a <span class="arithmatex">\(y\in P\)</span> for which <span class="arithmatex">\(u&lt;y\)</span>. Since <span class="arithmatex">\(u\)</span> is an upper bound of <span class="arithmatex">\(C\)</span>, <span class="arithmatex">\(y\)</span> has to be strict upper bound of <span class="arithmatex">\(C\)</span>, but <span class="arithmatex">\(C\)</span> has no strict upper bounds by assumption. Thus <span class="arithmatex">\(u\)</span> is maximal in <span class="arithmatex">\(P\)</span>. </p>
+</details>
+<hr />
+<p><strong>Corollary 10.</strong> (Bourbaki-Witt). Let <span class="arithmatex">\(P\)</span> be a nonempty poset such that every chain <span class="arithmatex">\(C\subseteq P\)</span> has a least upper bound. If <span class="arithmatex">\(h:P\to P\)</span> satisfies <span class="arithmatex">\(x\leq h(x)\)</span> for all <span class="arithmatex">\(x\in P\)</span>, then <span class="arithmatex">\(h\)</span> has a fixed point, i.e., there is some <span class="arithmatex">\(x\in P\)</span> such that <span class="arithmatex">\(x=H(x)\)</span>.</p>
+<p><em>Proof.</em> Assume by way of contradiction that <span class="arithmatex">\(x&lt;h(x)\)</span> for all <span class="arithmatex">\(x\in P\)</span>. But then <span class="arithmatex">\(f(C):=h(\sup C)\)</span> immediately contradicts Chain Bounding.</p>
+<details class="note">
+<summary>Note</summary>
+<p>The proof here is easy to follow, but there are some subtleties I'd like to comment on. Bourbaki-Witt doesn't require AoC, only Lemma 6 (which is used to prove Zorn's Lemma) requires assuming AoC. To understand this bit of detail more, let us analyze the requirement that every chain <span class="arithmatex">\(C\)</span> has a least upper bound. If we relax this to "has an upper bound", then we will get stuck when defining <span class="arithmatex">\(f\)</span> because we would have to <em>choose</em> an upper bound of <span class="arithmatex">\(C\)</span> to feed into <span class="arithmatex">\(h\)</span>; of course we can make this choice, but only if we assume AoC. Since the least upper bound is unique, there is no choice involved so we can avoid assuming AoC. </p>
+</details>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 7, 2025 04:38:21 UTC">November 7, 2025</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+
+  
+
+
+
+      
+    </article>
+  </div>
+
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.prune", "toc.follow"], "search": "../../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="../../../../../javascripts/katex.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+      
+        <script src="../../../../../javascripts/YTclips.js"></script>
+      
+    
+  </body>
+</html>
